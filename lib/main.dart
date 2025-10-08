@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
     HomeScreen.routeName:(context)=>HomeScreen(),
   } ,
 
-
     );
   }
 }
