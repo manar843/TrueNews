@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:news_app/provider/app_language_providar.dart';
 import 'package:news_app/provider/app_theme_provider.dart';
 import 'package:news_app/utils/my_theme_app.dart';
 import 'package:news_app/views/category/catagory_details.dart';
@@ -11,6 +12,8 @@ void main() {
   runApp(  MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AppThemeProvider()),
+        ChangeNotifierProvider(create: (context) => AppLanguageProvider())
+        ,
       ],
       child: MyApp()));
 }
@@ -21,6 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var themeProvider = Provider.of<AppThemeProvider>(context);
+    var languageProvider = Provider.of<AppLanguageProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
@@ -29,6 +33,7 @@ class MyApp extends StatelessWidget {
     HomeScreen.routeName:(context)=>HomeScreen(),
     CategoryDetails.routeName:(context)=>CategoryDetails()
   } ,
+      locale: Locale(languageProvider.appLanguage),
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
       themeMode: themeProvider.themeMode,

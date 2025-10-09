@@ -34,7 +34,7 @@ class AppStyles  {
     color:AppColor.primaryColor,
   );
   static TextStyle bold20red = GoogleFonts.inder(
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color:AppColor.redColor,
   );
@@ -63,9 +63,9 @@ class AppStyles  {
     fontWeight: FontWeight.w700,
     color:Colors.black,
   );
-  static TextStyle w50020black = GoogleFonts.inder(
-    fontSize: 20,
-    fontWeight: FontWeight.w500,
+  static TextStyle w70016black = GoogleFonts.inder(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
     color:Colors.black,
   );
 
