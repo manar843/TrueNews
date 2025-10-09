@@ -12,11 +12,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get logout => 'Logout';
 
   @override
-  String get language => 'Language';
+  String get language => 'اللفة';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'النمط';
 
   @override
-  String get dark => 'Dark';
+  String get dark => 'غامق';
+
+  @override
+  String get light => 'قاتح';
+
+  @override
+  String get arabic => 'العربيه';
+
+  @override
+  String get english => 'الانجليزيه';
 }

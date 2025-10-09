@@ -2,5 +2,8 @@
 "logout":"Logout",
 "language":"Language",
 "theme":"Theme",
-"dark":"Dark"
+"dark":"Dark",
+"light":"Light",
+"arabic":"Arabic",
+"english":"English"
 }

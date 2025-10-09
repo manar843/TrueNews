@@ -19,4 +19,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dark => 'Dark';
+
+  @override
+  String get light => 'Light';
+
+  @override
+  String get arabic => 'Arabic';
+
+  @override
+  String get english => 'English';
 }

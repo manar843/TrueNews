@@ -8,6 +8,8 @@ import 'package:news_app/views/home_screen.dart';
 import 'package:news_app/views/splash_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'l10n/app_localizations.dart';
+
 void main() {
   runApp(  MultiProvider(
       providers: [
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
     var themeProvider = Provider.of<AppThemeProvider>(context);
     var languageProvider = Provider.of<AppLanguageProvider>(context);
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
   routes:{

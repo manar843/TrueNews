@@ -1,6 +1,9 @@
 {
 "logout":"Logout",
-"language":"Language",
-"theme":"Theme",
-"dark":"Dark"
+"language":"اللفة",
+"theme":"النمط",
+"dark":"غامق",
+"light":"قاتح",
+"arabic":"العربيه",
+"english":"الانجليزيه"
 }
