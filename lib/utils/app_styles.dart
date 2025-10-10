@@ -8,6 +8,21 @@ class AppStyles  {
     fontWeight: FontWeight.w500,
     color: Colors.white,
   );
+  static TextStyle bold21White = GoogleFonts.inder(
+    fontSize: 21,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+  static TextStyle bold21black = GoogleFonts.inder(
+    fontSize: 21,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+  static TextStyle med12gray = GoogleFonts.inder(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: Colors.grey,
+  );
   static TextStyle med20White = GoogleFonts.inder(
     fontSize: 20,
     fontWeight: FontWeight.w500,

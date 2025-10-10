@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/views/category/widget/source_name_item.dart';
+import 'package:news_app/views/news/news_widget.dart';
 
 import '../../../model/sourceResponse.dart';
 
@@ -17,21 +18,28 @@ class _SourceTabWidgetState extends State<SourceTabWidget> {
   Widget build(BuildContext context) {
     return DefaultTabController(
         length: widget.SourceList.length,
-        child: TabBar(
-          indicatorColor: Colors.transparent,
-          isScrollable: true,
-            tabAlignment: TabAlignment.start,
-            onTap: (index){
-              selectedIndex=index;
-              setState(() { 
-              });
-            },
-            tabs:    widget.SourceList.map((source ){
-              return SourceNameItem(
-                source: source , 
-                isSelected: selectedIndex == widget.SourceList.indexOf(source) );
-            })
-                .toList()
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TabBar(
+                indicatorColor: Colors.transparent,
+                isScrollable: true,
+                  tabAlignment: TabAlignment.start,
+                  onTap: (index){
+                    selectedIndex=index;
+                    setState(() {
+                    });
+                  },
+                  tabs:    widget.SourceList.map((source ){
+                    return SourceNameItem(
+                      source: source ,
+                      isSelected: selectedIndex == widget.SourceList.indexOf(source) );
+                  })
+                      .toList()
+              ),
+              NewsWidget(sources: widget.SourceList[selectedIndex])
+            ],
+          ),
         ));
   }
 }

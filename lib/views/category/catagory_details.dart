@@ -13,18 +13,18 @@ class CategoryDetails extends StatefulWidget {
 class _CategoryDetailsState extends State<CategoryDetails> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
+    return
       //snapshot is state el data
       //loading error ok
-      body: FutureBuilder<SourceResponse>(
+        FutureBuilder<SourceResponse>(
         future: ApiManager.getSource(),
         builder: (context, snapShot) {
           print('  Connection state: ${snapShot.connectionState}');
           //todo:loading
           if (snapShot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator(color: Colors.red));
-          } else if (snapShot.hasError) {
+          }
+          else if (snapShot.hasError) {
             print('  Error: ${snapShot.error}');
             return Column(
               children: [
@@ -68,7 +68,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
 
           return SourceTabWidget(SourceList:sourcesList);
         },
-      ),
+
     );
   }
 }
